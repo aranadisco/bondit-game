@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bondit - .io Web Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        header {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #333;
+        }
+        .game-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .game-grid {
+            width: 300px;
+            height: 600px;
+            background-color: #222;
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(20, 1fr);
+            gap: 1px;
+        }
+        .grid-cell {
+            width: 100%;
+            height: 100%;
+            background-color: #555;
+        }
+        .side-panel {
+            margin-left: 20px;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        footer {
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+<script>
+    function sendEmote(emote) {
+        alert('You used emote: ' + emote);
+    }
+</script>
+</head>
+<body>
+    <header>
+        <h1>Bondit</h1>
+        <div>Target Molecule: H₂O | Score: 0 | Level: 1 | Speed: 1x</div>
+    </header>
+    <div class="game-container">
+        <div class="game-grid">
+            <!-- Grid cells go here -->
+        </div>
+        <div class="side-panel">
+            <h2>Next Atom</h2>
+            <div class="next-atom"></div>
+            <h2>Molecules Formed</h2>
+            <div class="molecule-list"></div>
+            <h2>Combo Multiplier</h2>
+            <div class="combo">x1</div>
+        </div>
+    </div>
+    <footer>
+        <p>Controls: Arrow Keys (Move/Rotate) | Space (Drop)</p>
+        <div class="emote-panel">
+    <button onclick="sendEmote('😀')">😀</button>
+    <button onclick="sendEmote('👍')">👍</button>
+    <button onclick="sendEmote('🎉')">🎉</button>
+    <button onclick="sendEmote('🤔')">🤔</button>
+</div>
+    </footer>
+</body>
+</html>
